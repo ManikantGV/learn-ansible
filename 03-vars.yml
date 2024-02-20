@@ -3,6 +3,6 @@
   vars:
     URL: maniknata.url.com
   tasks:
-    - name: Print URL
-      ansible.builtin.msg:
-        msg: URL -- {{ URL}}
+    - name: print URL
+      ansible.builtin.debug:
+        msg: url - {{ URL }}
