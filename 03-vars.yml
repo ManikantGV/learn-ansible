@@ -1,7 +1,7 @@
 - name: Demo on variables
   hosts: all
   vars:
-    URL: maniknata.url.com
+    URL: Play.maniknata.url.com
   tasks:
     - name: print URL
       ansible.builtin.debug:
@@ -16,3 +16,12 @@
         msg: task level -  {{ URL }}
       vars:
         URL: task.maniknata.url.com
+
+- name: load vars from a file
+  hosts: all
+  vars:
+    - exvars.yml
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: exvars - {{ URL }}
