@@ -5,6 +5,6 @@
     - name: Demo task for loops
       ansible.builtin.debug:
         msg : Fruite name - {{ item }}
-        loop:
-          - mani
-          - kanta
+      loop:
+         - mani
+         - kanta
