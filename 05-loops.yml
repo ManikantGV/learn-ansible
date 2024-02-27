@@ -8,3 +8,10 @@
       loop:
          - mani
          - kanta
+         -
+    - name: Demo task for loops
+      ansible.builtin.debug:
+        msg: Fruite name - {{ item.name }},Quantity - {{ item.quantity }}
+      loop:
+        - {name:Apple,quantity:10}
+        - {name:Banana,quantity:30}
