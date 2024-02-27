@@ -1,0 +1,10 @@
+- name: Demo on loops
+  hosts: all
+  connection: local
+  tasks:
+    - name: Demo task for loops
+      ansible.builtin.debug:
+        msg : Fruite name - {{ item }}
+        loop:
+          - mani
+          - kanta
